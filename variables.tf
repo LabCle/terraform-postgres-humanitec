@@ -35,13 +35,9 @@ variable "humanitec_env_id" {
 
 variable "aws_credentials" {
   type = object({
-    access_key = string
-    secret_key = string
-    region     = string
+    access_key    = string
+    secret_key    = string
+    region        = string
+    session_token = string
   })
-  default = {
-    access_key = ""
-    secret_key = ""
-    region     = "us-east-1"
-  }
 }
