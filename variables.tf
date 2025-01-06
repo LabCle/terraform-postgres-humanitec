@@ -32,3 +32,16 @@ variable "humanitec_env_id" {
   description = "ID do ambiente no Humanitec"
   default     = "development"
 }
+
+variable "aws_credentials" {
+  type = object({
+    access_key = string
+    secret_key = string
+    region     = string
+  })
+  default = {
+    access_key = ""
+    secret_key = ""
+    region     = "us-east-1"
+  }
+}
